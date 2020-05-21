@@ -1503,7 +1503,7 @@ ul.tags {
 }
 
 .inner {
-    background: rgba(114, 124, 181, 0.85);
+    background: #476a88;
     color: #fff;
     width: 100%;
     height: 100%;
@@ -2800,18 +2800,6 @@ a.link-style3 {
 /* 8. HOME PAGE					                    	 */
 /* ===================================================== */
 
-/* Texture Section
-=========================== */
-.texture-section {
-    padding: 65px 0;
-    margin: 20px 0 30px;
-    background: #96D3C6;
-}
-
-.texture1 {
-    background: url(../images/pattern-1.png);
-}
-
 /* Recent Post
 =========================== */
 .post-images {
@@ -3799,14 +3787,6 @@ section.parallax h2 {
     text-align: center;
     text-transform: uppercase;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-section.parallax-1 {
-    background-image: url("../images/1.jpg");
-}
-
-section.parallax-2 {
-    background-image: url("../images/2.jpg");
 }
 
 section.parallax h2 {
