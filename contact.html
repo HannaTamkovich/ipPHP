@@ -21,7 +21,8 @@
             <div class="row">
                 <div class="col-sm-8 top-info hidden-xs">
                     <span><i class="fa fa-phone"></i>Телефон: <a href="tel:+375296246276" style="color: #9f9f9f;">+375 (29) 624-64-76</a></span>
-                    <span><i class="fa fa-envelope"></i>Email: <a href="mailto:budaj.v.e@yandex.ru" style="color: #9f9f9f;">budaj.v.e@yandex.ru</a></span>
+                    <span><i class="fa fa-envelope"></i>Email: <a href="mailto:budaj.v.e@yandex.ru"
+                                                                  style="color: #9f9f9f;">budaj.v.e@yandex.ru</a></span>
                 </div>
             </div>
         </div>
@@ -100,31 +101,33 @@
                     </div>
                     <!--                    <p>Для связи оставьте свои данные</p>-->
 
-                    <div class="alert alert-success hidden alert-dismissable" id="contactSuccess">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <strong>Success!</strong> Your message has been sent to us.
+                    <div class="alert alert-success alert-dismissable" id="contactSuccess">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        Сообщение успешно отправлено!
                     </div>
 
-                    <div class="alert alert-error hidden" id="contactError">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <strong>Error!</strong> There was an error sending your message.
+                    <div class="alert alert-danger alert-dismissable" id="contactError">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        Ошибка! Сообщение не отправлено!
                     </div>
 
-                    <form id="contactForm" action="" novalidate="novalidate">
+                    <form id="contactForm" action='php/sendMail.php' method='post'>
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-lg-4">
                                     <input type="text" id="name" name="name" class="form-control" maxlength="100"
-                                           data-msg-required="Пожалуйста, введите имя." value="" placeholder="Имя">
+                                           value="" placeholder="Имя" required>
                                 </div>
                                 <div class="col-lg-4">
                                     <input type="tel" id="subject" name="subject" class="form-control" maxlength="100"
-                                           data-msg-required="Введите Ваш номер телефона." value=""
-                                           placeholder="Телефон">
+                                           value="" placeholder="Телефон" required>
                                 </div>
                                 <div class="col-lg-4">
                                     <input type="email" id="email" name="email" class="form-control" maxlength="100"
-                                           data-msg-email="Пожалуйста, введите email адрес корректно."
                                            value="" placeholder="E-mail">
                                 </div>
                             </div>
@@ -134,15 +137,14 @@
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <textarea id="message" class="form-control" name="message" rows="10" cols="50"
-                                              data-msg-required="Пожалуйста, заполните поле." maxlength="5000"
-                                              placeholder="Сообщение"></textarea>
+                                              maxlength="5000" placeholder="Сообщение" required></textarea>
 
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 text-right">
-                                <input type="submit" data-loading-text="Отправка..." class="btn btn-default btn-lg"
+                                <input type="submit" class="btn btn-default btn-lg"
                                        value="Отправить">
                             </div>
                         </div>
@@ -157,12 +159,14 @@
                             </div>
                             <!--                            <p></p>-->
                             <ul class="widget_info_contact">
-<!--                                <li><i class="fa fa-map-marker"></i>-->
-<!--                                    <p><strong>Адрес:</strong> #2021 Lorem Ipsum</p></li>-->
+                                <!--                                <li><i class="fa fa-map-marker"></i>-->
+                                <!--                                    <p><strong>Адрес:</strong> #2021 Lorem Ipsum</p></li>-->
                                 <li><i class="fa fa-user"></i>
-                                    <p><strong>Телефон:</strong><a href="tel:+375296246276">+375 (29) 624-64-76</a></p></li>
+                                    <p><strong>Телефон:</strong><a href="tel:+375296246276">+375 (29) 624-64-76</a></p>
+                                </li>
                                 <li><i class="fa fa-envelope"></i>
-                                    <p><strong>Email:</strong> <a href="mailto:budaj.v.e@yandex.ru">budaj.v.e@yandex.ru</a></p></li>
+                                    <p><strong>Email:</strong> <a
+                                            href="mailto:budaj.v.e@yandex.ru">budaj.v.e@yandex.ru</a></p></li>
                                 <li><i class="fa fa-globe"></i>
                                     <p><strong>Сайт:</strong> <a href="#" data-placement="bottom" data-toggle="tooltip"
                                                                  title="www.example.com">www.example.com</a></p></li>
