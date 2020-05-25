@@ -7,7 +7,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: "php/sendMail.php",
-            data: form_data,
+            // data: form_data,
             success: function () {
                 document.getElementById('contactSuccess').hidden = false;
                 document.getElementById('name').value = "";
