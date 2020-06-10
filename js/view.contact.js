@@ -6,8 +6,8 @@ $(document).ready(function () {
         var form_data = $(this).serialize();
         $.ajax({
             type: "POST",
-            url: "php/sendMail.php",
-            // data: form_data,
+            url: "https://a23f69d6695f.ngrok.io/orders",
+            data: form_data,
             success: function () {
                 document.getElementById('contactSuccess').hidden = false;
                 document.getElementById('name').value = "";
