@@ -3,7 +3,7 @@ $(document).ready(function () {
         var form_data = $(this).serialize();
         $.ajax({
             type: "POST",
-            url: "https://a23f69d6695f.ngrok.io/orders",
+            url: "https://ipbudaibot.ga/orders",
             data: form_data,
             success: function () {
                 document.getElementById('name').value = "";
