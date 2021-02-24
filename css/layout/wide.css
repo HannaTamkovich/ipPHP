@@ -9,3 +9,7 @@
 .hidden {
     display: none;
 }
+
+.modal-dialog {
+    width: 400px;
+}
