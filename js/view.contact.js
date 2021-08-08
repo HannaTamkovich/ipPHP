@@ -3,7 +3,7 @@ $(document).ready(function () {
         var form_data = $(this).serialize();
         $.ajax({
             type: "POST",
-            url: "https://ipbudaibot.ga/orders",
+            url: "https://europe-central2-metal-322217.cloudfunctions.net/metal-function",
             data: form_data,
             success: function () {
                 document.getElementById('name').value = "";
@@ -22,7 +22,7 @@ $(document).ready(function () {
         console.log(form_data);
         $.ajax({
             type: "POST",
-            url: "https://ipbudaibot.ga/orders",
+            url: "https://europe-central2-metal-322217.cloudfunctions.net/metal-function",
             data: form_data,
             success: function () {
                 document.getElementById('name').value = "";
